@@ -1,34 +1,21 @@
-using System.Collections.Generic;
+using Orientacao.ContentContext.Enums;
 
 namespace Orientacao.ContentContext
 {
     public class Course : Content
     {
-        public Course(){
-
-            Modules = new List<Module>();       
+        //Como estou pedindo no construtor do content um title e uma URL, eu preciso
+        // Passar através do construtor o article também os parametros
+        public Course(string title, string url, EContentLevel level)
+        :base(title, url)
+        {
+            Modules = new List<Module>();
+            Level = level;
         }
         public string Tag { get; set; } // Tag do curso;
         public IList<Module> Modules { get; set; }
-
-    }
-
-    public class Module
-    {
-        public Module()
-        {
-            Lectures = new List<Lecture>();
-        }
-
-        public int Order { get; set; }
-        public string  Title { get; set; }
-        public IList<Lecture> Lectures { get; set; }
-    }
-
-    public class Lecture
-    {
-        public int Ordem { get; set; }
-        public string Title { get; set; }
+        public int DurationInMinutes { get; set; }
+        public EContentLevel Level { get; set; }
     }
 
 }

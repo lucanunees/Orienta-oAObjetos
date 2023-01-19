@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\OrientacaoObject\\OrientacaoObject.csproj": {}
+    "C:\\Users\\User\\Desktop\\Repositorio_GITHUB\\OrientacaoAObjetos\\OrientacaoObject\\OrientacaoObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\OrientacaoObject\\OrientacaoObject.csproj": {
+    "C:\\Users\\User\\Desktop\\Repositorio_GITHUB\\OrientacaoAObjetos\\OrientacaoObject\\OrientacaoObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\OrientacaoObject\\OrientacaoObject.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Repositorio_GITHUB\\OrientacaoAObjetos\\OrientacaoObject\\OrientacaoObject.csproj",
         "projectName": "OrientacaoObject",
-        "projectPath": "C:\\Users\\User\\Desktop\\OrientacaoObject\\OrientacaoObject.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Repositorio_GITHUB\\OrientacaoAObjetos\\OrientacaoObject\\OrientacaoObject.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\OrientacaoObject\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Repositorio_GITHUB\\OrientacaoAObjetos\\OrientacaoObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

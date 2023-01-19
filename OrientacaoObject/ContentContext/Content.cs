@@ -6,10 +6,13 @@ namespace Orientacao.ContentContext
     public abstract class Content
 
     {
-        public Content()
+        public Content(string title, string url)
         {
             Id = Guid.NewGuid(); // Desta forma que cria um novo ID
+            Title = title;
+            Url = url;
         }
+
         public Guid Id { get; set; } // Guid é u global unique identifier (ID)
         public string Title { get; set; }
         public string Url { get; set; }
