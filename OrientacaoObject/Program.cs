@@ -28,12 +28,14 @@ namespace OrientacaoObject
             var courseCSharp = new Course("Fundamentos CSharp", "Linguagem CSharp", EContentLevel.Fundamental);
             var courseAspNet = new Course("Fundamentos .NET", "Framework", EContentLevel.Fundamental);
 
-
             // Criando a lista de cursos.
             var courses = new List<Course>();
             courses.Add(courseOOP);
             courses.Add(courseCSharp);
             courses.Add(courseAspNet);
+
+            if(courseOOP.IsInvalid) 
+            Console.WriteLine($"{courseOOP.Title} está invalido");
 
             // Criando uma lista de Carreiras:
             var careers = new List<Career>();
@@ -58,6 +60,14 @@ namespace OrientacaoObject
                     Console.WriteLine($"ID do curso: {item.Order} Titulo do curso: {item.Title}");
                     Console.WriteLine($"Titulo do curso: {item.Course.Title}");
                     Console.WriteLine($"Nivel do curso: {item.Course.Level}");
+
+                    foreach(var notification in item.Notifications)
+                    {
+                     Console.WriteLine($"{notification.Property} - {notification.Message}");
+                    }
+
+
+
                 }
                 Console.ReadLine();
             }

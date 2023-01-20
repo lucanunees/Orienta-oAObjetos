@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
+    "",
+    "\\OrientacaoObject",
     "\\OrientacaoObject\\ContentContext"
   ],
+  "SelectedNode": "\\OrientacaoObject\\ContentContext\\Base.cs",
   "PreviewInSolutionExplorer": false
 }
