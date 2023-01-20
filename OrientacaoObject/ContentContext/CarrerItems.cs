@@ -1,4 +1,5 @@
 using Orientacao.NotificationContext;
+using Orientacao.SharedContext;
 
 namespace Orientacao.ContentContext
 {

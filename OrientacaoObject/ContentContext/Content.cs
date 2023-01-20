@@ -1,3 +1,5 @@
+using Orientacao.SharedContext;
+
 namespace Orientacao.ContentContext
 {
     /* Como é uma classe abastrata ou seja é um conteudo.. 

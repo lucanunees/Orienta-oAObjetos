@@ -1,7 +1,7 @@
 ﻿using System;
 using Orientacao.NotificationContext;
 
-namespace Orientacao.ContentContext
+namespace Orientacao.SharedContext
 {
     public abstract class Base : Notifiable
     {

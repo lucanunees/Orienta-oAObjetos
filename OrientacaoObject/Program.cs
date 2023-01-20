@@ -1,5 +1,6 @@
 ﻿using Orientacao.ContentContext;
 using Orientacao.ContentContext.Enums;
+using Orientacao.SubscriptionContext;
 using System;
 
 namespace OrientacaoObject
@@ -24,7 +25,7 @@ namespace OrientacaoObject
             }
 
             //Criando o curso.
-            var courseOOP = new Course("Fundamentos OOP", "Fundamentos OOP", EContentLevel.Fundamental) ;
+            var courseOOP = new Course("Fundamentos OOP", "Fundamentos OOP", EContentLevel.Fundamental);
             var courseCSharp = new Course("Fundamentos CSharp", "Linguagem CSharp", EContentLevel.Fundamental);
             var courseAspNet = new Course("Fundamentos .NET", "Framework", EContentLevel.Fundamental);
 
@@ -33,22 +34,25 @@ namespace OrientacaoObject
             courses.Add(courseOOP);
             courses.Add(courseCSharp);
             courses.Add(courseAspNet);
+            
 
-            if(courseOOP.IsInvalid) 
-            Console.WriteLine($"{courseOOP.Title} está invalido");
-
+            
             // Criando uma lista de Carreiras:
             var careers = new List<Career>();
 
             // Criando uma Career com esses cursos.
             var careerDotnet = new Career("Especialista .Net", "Especialista-dotnet");
-            var careerItem2 = new CareerItem(1,"Aprenda OOP", "Descrição", courseOOP);
-            var careerItem = new CareerItem(3,"Comece por aqui", "Descrição", courseCSharp);
-            var careerItem3 = new CareerItem(2,"Aprenda .NET", "Descrição", courseAspNet);
+            var careerOOP = new CareerItem(1,"Aprenda OOP", "Descrição", courseOOP);
+            var careerBeginner = new CareerItem(3,"Comece por aqui", "Descrição", courseCSharp);
+            var careerDotNet = new CareerItem(2,"Aprenda .NET", "Descrição", courseAspNet);
 
-            careerDotnet.Items.Add(careerItem2);
-            careerDotnet.Items.Add(careerItem3);
-            careerDotnet.Items.Add(careerItem);
+            careerDotnet.Items.Add(careerOOP);
+            careerDotnet.Items.Add(careerDotNet);
+            careerDotnet.Items.Add(careerBeginner);
+
+            if(courseOOP.IsInvalid) 
+            Console.WriteLine($"{courseOOP.Title} está invalido");
+
             careers.Add(careerDotnet);
 
             foreach (var career in careers)
@@ -66,9 +70,15 @@ namespace OrientacaoObject
                      Console.WriteLine($"{notification.Property} - {notification.Message}");
                     }
 
-
-
                 }
+
+                var payPalSubscription = new PayPalSubscription();
+                var student = new Student();
+                student.CreateSubscription(payPalSubscription);
+
+
+
+
                 Console.ReadLine();
             }
 
