@@ -1,19 +1,19 @@
+using Orientacao.SharedContext;
+
 namespace Orientacao.ContentContext
 {
     /* Como é uma classe abastrata ou seja é um conteudo.. 
        Deixando abstrata ela não pode ser instanciada, inicializada. 
    */
-    public abstract class Content
+    public abstract class Content : Base
 
     {
         public Content(string title, string url)
-        {
-            Id = Guid.NewGuid(); // Desta forma que cria um novo ID
+        {           
             Title = title;
             Url = url;
         }
 
-        public Guid Id { get; set; } // Guid é u global unique identifier (ID)
         public string Title { get; set; }
         public string Url { get; set; }
     }

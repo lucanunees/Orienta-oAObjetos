@@ -1,13 +1,15 @@
+using Orientacao.NotificationContext;
+using Orientacao.SharedContext;
+
 namespace Orientacao.ContentContext
 {
-    public class CareerItem
+    public class CareerItem : Base
     {
-
         public CareerItem(int order, string title, 
             string description, Course course)
         {
             if (course == null)
-                throw new System.Exception("O Curso não pode ser nulo");
+                AddNotification(new Notification("Course", "Course Invalido"));
 
             Order = order;
             Title = title;
@@ -15,7 +17,7 @@ namespace Orientacao.ContentContext
             Course = course;
 
         }
-
+    
         public int Order { get; set; }
 
         public string Title { get; set; }
